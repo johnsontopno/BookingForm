@@ -1,97 +1,96 @@
-body{
-    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(Image/breathtaking-shot-beautiful-stones-turquoise-water-lake-hills-background_181624-12847.jpg);
-    background-size: cover;
-    background-position:center
+/* === Background and Base === */
+body {
+  background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                    url("Image/pexels-francesco-ungaro-2325447.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
 }
-.booking-form-box{
-    max-width: 350px;
-    border:1px solid #ced4da;
-    margin: 10% auto 0;
-}
-.radio-btn{
-    margin: 0 20px;
-}
-.radio-btn .btn{
-    margin: 20px 10px 20px 0;
-    box-shadow: none;
-}
-.radio-btn .btn::after{
-    content: '';
-    height: 15px;
-    width: 15px;
-    top: -2px;
-    left: -1px;
-    background-color: #fff;
-    position: relative;
-    display: inline-block;
-    border: 3px solid #fff;
-    visibility: visible;
-    border-radius: 50%;
-}
-.radio-btn .btn:checked::after{
-    content: '';
-    background-color: #000;
-    transition: 0.5s;
-}
-.radio-btn span{
-    color: #fff;
-    margin-right: 5px;
-    font-size: 12px;
-}
-.booking-form{
-    padding: 0 20px 20px;
-}
-.booking-form label{
-    margin-bottom: 5px;
-    margin-top: 10px;
-    font-size: 12px;
-    color: #fff;
-}
-input::placeholder{
-    color: #fff !important;
-}
-.input-grp{
-    width: 151px;
-    display: inline-block;
-}
-.form-control{
-    font-size: 12px !important ;
-    border-radius: 0  !important;
-    color:#fff !important;
-    background: transparent !important;
-    box-shadow: none !important;
-}
-.select-date::-webkit-inner-spin-button,
-.select-date::-webkit-inner-spin-button{
-    -webkit-appearance: none;
-    margin: 0;
-}
-.select-date::-webkit-calender-picker-indicator{
-    background: transparent !important;
-}
-.custom-select{
-    color: #fff !important;
-    font-size: 12px !important;
-    border: 1px solid #ced4da !important;
-    box-shadow: none !important;
-    border-radius: 0 !important;
-    background: transparent !important;
 
+/* === Booking Box === */
+.booking-form-box {
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 30px;
+  max-width: 500px;
+  margin: 80px auto;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
 }
-.custom-select option{
-    color: #333;
+
+/* === Radio Button Group === */
+.radio-btn {
+  margin-bottom: 20px;
 }
-.flight{
-    width: 100%;
-    padding: 9px 0 !important;
-    font-size: 12px !important;
-    border: 1px solid #ced4da !important;
-    background: transparent !important;
-    box-shadow: none !important;
-    border-radius: 0 !important;
+
+.radio-btn label {
+  margin: 0 10px;
+  font-weight: 500;
+  color: #333;
+  cursor: pointer;
 }
-.flight:hover{
-    background: #fff !important;
-    color: #000 !important;
-    transition: 0.5s;
+
+.radio-btn input[type="radio"] {
+  display: none;
+}
+
+.radio-btn span {
+  position: relative;
+  padding-left: 25px;
+}
+
+.radio-btn span::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 2px;
+  height: 16px;
+  width: 16px;
+  background: #fff;
+  border: 2px solid #007bff;
+  border-radius: 50%;
+}
+
+.radio-btn input[type="radio"]:checked + span::before {
+  background-color: #007bff;
+}
+
+/* === Form Elements === */
+.booking-form label {
+  font-weight: 600;
+  color: #333;
+  font-size: 14px;
+}
+
+.form-control,
+.custom-select {
+  background-color: #f8f9fa;
+  color: #333;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 1px solid #ced4da;
+  margin-bottom: 10px;
+}
+
+/* === Calendar Icon Fix (optional styling) === */
+.select-date::-webkit-calendar-picker-indicator {
+  filter: invert(0.3);
+}
+
+/* === Submit Button === */
+.flight {
+  background-color: #007bff;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  padding: 12px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.flight:hover {
+  background-color: #0056b3;
 }

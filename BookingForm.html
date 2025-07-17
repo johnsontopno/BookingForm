@@ -2,67 +2,69 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="BookingForm.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flight Booking Form</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="BookingForm.css" />
 </head>
 
 <body>
+  <div class="container">
     <div class="booking-form-box">
-        <div class="radio-btn">
-            <input type="radio" checked="checked" class="btn" name="check">
-            <span>Roundtrip</span>
-            <input type="radio" class="btn" name="check">
-            <span>One Way</span>
-            <input type="radio" class="btn" name="check">
-            <span>Multy-City </span>
-        </div>
-        <div class="booking-form">
-            <label>Flying Form</label>
-            <input type="text" class="form-control" placeholder="City or Airport">
-            <label>Flying To</label>
-            <input type="text" class="form-control" placeholder="City or Airport">
+      <div class="radio-btn text-center">
+        <label><input type="radio" name="trip" checked><span>Roundtrip</span></label>
+        <label><input type="radio" name="trip"><span>One Way</span></label>
+        <label><input type="radio" name="trip"><span>Multi-City</span></label>
+      </div>
 
-            <div class="input-grp">
-                <label>Departing</label>
-                <input type="date" class="form-control select-date">
-            </div>
-
-            <div class="input-grp">
-                <label>Returing</label>
-                <input type="date" class="form-control select-date">
-            </div>
-
-
-            <div class="input-grp">
-                <label>Adults</label>
-                <input type="number" class="form-control" value="1">
-            </div>
-
-
-            <div class="input-grp">
-                <label>Children</label>
-                <input type="number" class="form-control" value="0">
-            </div>
-
-
-            <div class="input-grp">
-                <label>Travel Class</label>
-                <select class="custom-select">
-                    <option value="1">Economy Class</option>
-                    <option value="2">Economy Class</option>
-                </select>
-            </div>
-            <div class="input-grp">
-                <button type="button" class="btn btn-primary flight">Show flight</button>
-            </div>
+      <form class="booking-form">
+        <div class="form-group">
+          <label>Flying From</label>
+          <input type="text" class="form-control" placeholder="City or Airport">
         </div>
 
+        <div class="form-group">
+          <label>Flying To</label>
+          <input type="text" class="form-control" placeholder="City or Airport">
+        </div>
+
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label>Departing</label>
+            <input type="date" class="form-control select-date">
+          </div>
+          <div class="form-group col-md-6">
+            <label>Returning</label>
+            <input type="date" class="form-control select-date">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label>Adults</label>
+            <input type="number" class="form-control" value="1" min="1">
+          </div>
+          <div class="form-group col-md-6">
+            <label>Children</label>
+            <input type="number" class="form-control" value="0" min="0">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Travel Class</label>
+          <select class="custom-select">
+            <option>Economy Class</option>
+            <option>Business Class</option>
+            <option>First Class</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn btn-block flight">Show Flights</button>
+      </form>
     </div>
-
+  </div>
 </body>
 
 </html>
